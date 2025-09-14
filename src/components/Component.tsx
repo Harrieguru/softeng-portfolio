@@ -329,7 +329,10 @@ export const Component: React.FC = () => {
                       <span className="project-tag">Material UI</span>
                     </div>
                     <div className="project-buttons">
-                      <a href="#" className="btn btn-primary">
+                      <a
+                        href="https://68c7232e89e47cd88953675c--harrietodhiambo.netlify.app/"
+                        className="btn btn-primary"
+                      >
                         Live Demo
                       </a>
                       <a href="#" className="btn-icon">
