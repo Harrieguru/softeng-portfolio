@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import pic from "../assets/pic.jpg";
 import docker from "../assets/docker.png";
 import dotnet from "../assets/dotnet.png";
@@ -26,7 +26,28 @@ interface ContactFormData {
 }
 
 export const Component: React.FC = () => {
-  //skills array
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia("prefers-color-scheme: dark").matches;
+
+    if (savedTheme) {
+      setIsDarkMode(savedTheme === "dark");
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    } else if (prefersDark) {
+      setIsDarkMode(true);
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = isDarkMode ? "light" : "dark";
+    setIsDarkMode(!isDarkMode);
+    document.documentElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+  };
+
   const skills: skill[] = [
     { name: "React", img: React_Logo },
     { name: "TypeScript", img: Typescript },
@@ -95,9 +116,18 @@ export const Component: React.FC = () => {
                   <a href="#projects">Projects</a>
                   <a href="#contact">Contact</a>
                   <hr className="divider" />
-                  <button className="toggle-theme-btn" type="button">
-                    <span className="material-symbols-outlined">landscape</span>{" "}
-                    Toggle Theme
+                  <button
+                    className="toggle-theme-btn"
+                    type="button"
+                    onClick={toggleTheme}
+                    aria-label={`Switch to ${
+                      isDarkMode ? "light" : "dark"
+                    } mode`}
+                  >
+                    <span className="material-symbols-outlined">
+                      {isDarkMode ? "light_mode" : "dark_mode"}
+                    </span>
+                    {isDarkMode ? "Light Mode" : "Dark Mode"}
                   </button>
                 </div>
               </details>
@@ -332,7 +362,10 @@ export const Component: React.FC = () => {
                       <a href="#" className="btn btn-primary">
                         Live Demo
                       </a>
-                      <a href="#" className="btn-icon">
+                      <a
+                        href="https://github.com/Harrieguru/softeng-portfolio"
+                        className="btn-icon"
+                      >
                         <i className="fa-brands fa-github"></i>
                       </a>
                     </div>
