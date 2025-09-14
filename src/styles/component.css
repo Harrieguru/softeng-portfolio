@@ -2252,6 +2252,10 @@
   color: var(--primary-400);
 }
 
+[data-theme="dark"] .skill-card h3 {
+  color: var(--neutral-950); /* This will be white in dark mode */
+}
+
 /* Icon Animation */
 .toggle-theme-btn:hover .material-symbols-outlined {
   transform: rotate(15deg);
