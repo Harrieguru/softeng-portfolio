@@ -1542,21 +1542,17 @@
   margin: 0 auto;
 }
 
-@media (min-width: 768px) {
-  .contact-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 .contact-info h3 {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .contact-info p {
-  color: var(--neutral-700);
-  margin-bottom: 32px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .contact-details {
@@ -1587,6 +1583,7 @@
 
 .social-icons {
   display: flex;
+  justify-content: center;
   gap: 16px;
 }
 
@@ -1901,7 +1898,17 @@
 }
 
 .contact-details {
+  display: flex;
+  justify-content: center;
   margin-bottom: 32px;
+}
+
+.contact-details .dcontact {
+  margin-right: 20px;
+}
+
+.contact-details .material-symbols-outlined {
+  margin-right: 20px;
 }
 
 .contact-item {
