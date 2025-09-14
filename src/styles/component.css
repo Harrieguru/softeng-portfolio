@@ -2218,6 +2218,10 @@
   transition: all 0.3s ease;
 }
 
+.toggle-theme-btn span:last-child {
+  display: none; /* Hide the text */
+}
+
 .toggle-theme-btn:hover {
   background-color: var(--neutral-200);
   border-color: var(--primary-400);

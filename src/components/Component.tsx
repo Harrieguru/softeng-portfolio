@@ -100,8 +100,15 @@ export const Component: React.FC = () => {
                   Contact
                 </a>
 
-                <button className="theme-button" type="button">
-                  <span className="material-symbols-outlined">landscape</span>
+                <button
+                  className="theme-button"
+                  type="button"
+                  onClick={toggleTheme}
+                  aria-label={`Switch to ${isDarkMode ? "light" : "dark"} mode`}
+                >
+                  <span className="material-symbols-outlined">
+                    {isDarkMode ? "light_mode" : "dark_mode"}
+                  </span>
                 </button>
               </div>
 
@@ -127,7 +134,6 @@ export const Component: React.FC = () => {
                     <span className="material-symbols-outlined">
                       {isDarkMode ? "light_mode" : "dark_mode"}
                     </span>
-                    {isDarkMode ? "Light Mode" : "Dark Mode"}
                   </button>
                 </div>
               </details>
