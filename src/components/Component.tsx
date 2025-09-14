@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import pic from "../assets/pic.jpg";
 import docker from "../assets/docker.png";
 import dotnet from "../assets/dotnet.png";
@@ -26,7 +26,28 @@ interface ContactFormData {
 }
 
 export const Component: React.FC = () => {
-  //skills array
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia("prefers-color-scheme: dark").matches;
+
+    if (savedTheme) {
+      setIsDarkMode(savedTheme === "dark");
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    } else if (prefersDark) {
+      setIsDarkMode(true);
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = isDarkMode ? "light" : "dark";
+    setIsDarkMode(!isDarkMode);
+    document.documentElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+  };
+
   const skills: skill[] = [
     { name: "React", img: React_Logo },
     { name: "TypeScript", img: Typescript },
@@ -79,8 +100,15 @@ export const Component: React.FC = () => {
                   Contact
                 </a>
 
-                <button className="theme-button" type="button">
-                  <span className="material-symbols-outlined">landscape</span>
+                <button
+                  className="theme-button"
+                  type="button"
+                  onClick={toggleTheme}
+                  aria-label={`Switch to ${isDarkMode ? "light" : "dark"} mode`}
+                >
+                  <span className="material-symbols-outlined">
+                    {isDarkMode ? "light_mode" : "dark_mode"}
+                  </span>
                 </button>
               </div>
 
@@ -95,9 +123,17 @@ export const Component: React.FC = () => {
                   <a href="#projects">Projects</a>
                   <a href="#contact">Contact</a>
                   <hr className="divider" />
-                  <button className="toggle-theme-btn" type="button">
-                    <span className="material-symbols-outlined">landscape</span>{" "}
-                    Toggle Theme
+                  <button
+                    className="toggle-theme-btn"
+                    type="button"
+                    onClick={toggleTheme}
+                    aria-label={`Switch to ${
+                      isDarkMode ? "light" : "dark"
+                    } mode`}
+                  >
+                    <span className="material-symbols-outlined">
+                      {isDarkMode ? "light_mode" : "dark_mode"}
+                    </span>
                   </button>
                 </div>
               </details>
@@ -335,7 +371,10 @@ export const Component: React.FC = () => {
                       >
                         Live Demo
                       </a>
-                      <a href="#" className="btn-icon">
+                      <a
+                        href="https://github.com/Harrieguru/softeng-portfolio"
+                        className="btn-icon"
+                      >
                         <i className="fa-brands fa-github"></i>
                       </a>
                     </div>
@@ -384,7 +423,7 @@ export const Component: React.FC = () => {
             <div className="container">
               <h2 className="section-title">Get In Touch</h2>
 
-              <div className="contact-grid">
+              <div className="">
                 <div className="contact-info">
                   <h3>Contact Information</h3>
                   <p>
@@ -394,19 +433,19 @@ export const Component: React.FC = () => {
                   </p>
 
                   <div className="contact-details">
-                    <div className="contact-item">
+                    <div className="">
                       <span className="material-symbols-outlined">email</span>
-                      <div>
+                      <div className="dcontact">
                         <h4>Email</h4>
                         <p>hartie102@gmail.com</p>
                       </div>
                     </div>
 
-                    <div className="contact-item">
+                    <div className="">
                       <span className="material-symbols-outlined">
                         location_on
                       </span>
-                      <div>
+                      <div className="dcontact">
                         <h4>Location</h4>
                         <p>Toronto, CA</p>
                       </div>
@@ -434,45 +473,6 @@ export const Component: React.FC = () => {
                       <i className="fa-brands fa-twitter"></i>
                     </a>
                   </div>
-                </div>
-
-                <div className="contact-form-container">
-                  <form className="contact-form" onSubmit={handleSubmit}>
-                    <div className="form-group">
-                      <label htmlFor="name">Your Name</label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="John Smith"
-                        required
-                      />
-                    </div>
-
-                    <div className="form-group">
-                      <label htmlFor="email">Your Email</label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="john.smith@example.com"
-                        required
-                      />
-                    </div>
-
-                    <div className="form-group">
-                      <label htmlFor="message">Message</label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        placeholder="Your message..."
-                        required
-                      ></textarea>
-                    </div>
-                    <button type="submit" className="form-submit">
-                      Send Message
-                    </button>
-                  </form>
                 </div>
               </div>
             </div>

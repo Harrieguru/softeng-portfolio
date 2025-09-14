@@ -1542,21 +1542,17 @@
   margin: 0 auto;
 }
 
-@media (min-width: 768px) {
-  .contact-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 .contact-info h3 {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .contact-info p {
-  color: var(--neutral-700);
-  margin-bottom: 32px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .contact-details {
@@ -1587,6 +1583,7 @@
 
 .social-icons {
   display: flex;
+  justify-content: center;
   gap: 16px;
 }
 
@@ -1901,7 +1898,17 @@
 }
 
 .contact-details {
+  display: flex;
+  justify-content: center;
   margin-bottom: 32px;
+}
+
+.contact-details .dcontact {
+  margin-right: 20px;
+}
+
+.contact-details .material-symbols-outlined {
+  margin-right: 20px;
 }
 
 .contact-item {
@@ -2038,4 +2045,220 @@
 
 .mt-12 {
   margin-top: 48px;
+}
+
+/*--------------------------------------------------------*/
+
+/* Dark Mode Variables - Add this to your existing CSS */
+:root {
+  /* Existing light mode variables stay the same */
+  --primary-50: #f3f1ff;
+  --primary-100: #e9e5ff;
+  --primary-200: #d5cfff;
+  --primary-300: #b7a9ff;
+  --primary-400: #9478ff;
+  --primary-500: #7341ff;
+  --primary-600: #631bff;
+  --primary-700: #611bf8;
+  --primary-800: #4607d0;
+  --primary-900: #3c08aa;
+  --primary-950: #220174;
+  --neutral-50: #f7f7f7;
+  --neutral-100: #eeeeee;
+  --neutral-200: #e0e0e0;
+  --neutral-300: #cacaca;
+  --neutral-400: #b1b1b1;
+  --neutral-500: #999999;
+  --neutral-600: #7f7f7f;
+  --neutral-700: #676767;
+  --neutral-800: #545454;
+  --neutral-900: #464646;
+  --neutral-950: #282828;
+}
+
+/* Dark Mode Variables */
+[data-theme="dark"] {
+  --primary-50: #1a0b33;
+  --primary-100: #2d1754;
+  --primary-200: #3c1e66;
+  --primary-300: #5a3399;
+  --primary-400: #7341ff;
+  --primary-500: #8a5cff;
+  --primary-600: #9f77ff;
+  --primary-700: #b192ff;
+  --primary-800: #c4adff;
+  --primary-900: #d7c8ff;
+  --primary-950: #eae5ff;
+
+  --neutral-50: #0f0f0f;
+  --neutral-100: #1a1a1a;
+  --neutral-200: #2d2d2d;
+  --neutral-300: #404040;
+  --neutral-400: #525252;
+  --neutral-500: #737373;
+  --neutral-600: #a3a3a3;
+  --neutral-700: #d4d4d4;
+  --neutral-800: #e5e5e5;
+  --neutral-900: #f5f5f5;
+  --neutral-950: #fafafa;
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] #webcrumbs {
+  background-color: var(--neutral-50);
+  color: var(--neutral-900);
+}
+
+[data-theme="dark"] .navbar {
+  background-color: var(--neutral-100);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid var(--neutral-200);
+}
+
+[data-theme="dark"] .mobile-dropdown {
+  background-color: var(--neutral-100);
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .mobile-dropdown a:hover,
+[data-theme="dark"] .mobile-dropdown button:hover {
+  background-color: var(--neutral-200);
+}
+
+[data-theme="dark"] .theme-button {
+  background-color: var(--neutral-200);
+}
+
+[data-theme="dark"] .theme-button:hover {
+  background-color: var(--neutral-300);
+}
+
+[data-theme="dark"] .section-gray {
+  background-color: var(--neutral-100);
+}
+
+[data-theme="dark"] .skill-card {
+  background: linear-gradient(145deg, var(--neutral-100), var(--neutral-200));
+  border: 1px solid var(--neutral-300);
+  color: var(--neutral-900);
+}
+
+[data-theme="dark"] .skill-card:hover {
+  background: linear-gradient(145deg, var(--neutral-200), var(--neutral-300));
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3), 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .project-card {
+  background-color: var(--neutral-100);
+  border: 1px solid var(--neutral-200);
+}
+
+[data-theme="dark"] .project-card:hover {
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .timeline-card {
+  background-color: var(--neutral-100);
+  border: 1px solid var(--neutral-200);
+}
+
+[data-theme="dark"] .timeline-card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .contact-form input,
+[data-theme="dark"] .contact-form textarea {
+  background-color: var(--neutral-100);
+  border-color: var(--neutral-300);
+  color: var(--neutral-900);
+}
+
+[data-theme="dark"] .contact-form input:focus,
+[data-theme="dark"] .contact-form textarea:focus {
+  border-color: var(--primary-500);
+}
+
+[data-theme="dark"] .footer {
+  background-color: var(--neutral-100);
+  border-top: 1px solid var(--neutral-200);
+}
+
+[data-theme="dark"] .btn-outline {
+  border-color: var(--primary-500);
+  color: var(--primary-500);
+}
+
+[data-theme="dark"] .btn-outline:hover {
+  background-color: var(--primary-100);
+}
+
+[data-theme="dark"] .btn-icon {
+  border-color: var(--neutral-400);
+  color: var(--neutral-700);
+}
+
+[data-theme="dark"] .btn-icon:hover {
+  background-color: var(--neutral-200);
+}
+
+[data-theme="dark"] .social-icon {
+  background-color: var(--neutral-300);
+}
+
+[data-theme="dark"] .social-icon:hover {
+  background-color: var(--primary-600);
+}
+
+/* Theme Toggle Button Styling */
+.toggle-theme-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid var(--neutral-300);
+  border-radius: 20px;
+  background-color: var(--neutral-100);
+  color: var(--neutral-700);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.toggle-theme-btn span:last-child {
+  display: none; /* Hide the text */
+}
+
+.toggle-theme-btn:hover {
+  background-color: var(--neutral-200);
+  border-color: var(--primary-400);
+  color: var(--primary-600);
+}
+
+.toggle-theme-btn .material-symbols-outlined {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+[data-theme="dark"] .toggle-theme-btn {
+  background-color: var(--neutral-200);
+  border-color: var(--neutral-400);
+  color: var(--neutral-800);
+}
+
+[data-theme="dark"] .toggle-theme-btn:hover {
+  background-color: var(--neutral-300);
+  border-color: var(--primary-500);
+  color: var(--primary-400);
+}
+
+/* Icon Animation */
+.toggle-theme-btn:hover .material-symbols-outlined {
+  transform: rotate(15deg);
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
 }
