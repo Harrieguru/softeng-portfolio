@@ -366,7 +366,7 @@ export const Component: React.FC = () => {
                     </div>
                     <div className="project-buttons">
                       <a
-                        href="https://68c7232e89e47cd88953675c--harrietodhiambo.netlify.app/"
+                        href="https://harrietodhiambo.netlify.app/"
                         className="btn btn-primary"
                       >
                         Live Demo
