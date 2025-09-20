@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
 import pic from "../assets/pic.jpg";
+import cover from "../assets/cover.png";
+import ebook from "../assets/ebook.png";
+import healthassist from "../assets/healthassist.png";
+import link2lease from "../assets/link2lease.png";
 import docker from "../assets/docker.png";
 import dotnet from "../assets/dotnet.png";
 import git from "../assets/git.png";
@@ -160,7 +164,7 @@ export const Component: React.FC = () => {
                   </a>
                 </div>
               </div>
-              <div className="hero-image">
+              {/* <div className="hero-image">
                 <div className="image-container">
                   <div className="image-bg"></div>
                   <img
@@ -169,7 +173,7 @@ export const Component: React.FC = () => {
                     className="profile-image"
                   />
                 </div>
-              </div>
+              </div> */}
             </div>
           </section>
 
@@ -209,12 +213,12 @@ export const Component: React.FC = () => {
                     >
                       <i className="fa-brands fa-github"></i> GitHub
                     </a>
-                    <a href="#" className="social-link">
+                    {/* <a href="#" className="social-link">
                       <span className="material-symbols-outlined">
                         download
                       </span>{" "}
                       Resume
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>
@@ -242,7 +246,11 @@ export const Component: React.FC = () => {
 
               <div className="projects-grid">
                 <div className="project-card">
-                  <img src="" alt="Link2Lease" className="project-image" />
+                  <img
+                    src={link2lease}
+                    alt="Link2Lease"
+                    className="project-image"
+                  />
                   <div className="project-content">
                     <h3 className="project-title">Link2Lease</h3>
                     <p className="project-description">
@@ -270,24 +278,35 @@ export const Component: React.FC = () => {
                 </div>
 
                 <div className="project-card">
-                  <img src="" alt="Blog Platform" className="project-image" />
+                  <img
+                    src={cover}
+                    alt="Blog Platform"
+                    className="project-image"
+                  />
                   <div className="project-content">
-                    <h3 className="project-title">Content Management System</h3>
+                    <h3 className="project-title">
+                      Cover Letter Generator Platform
+                    </h3>
                     <p className="project-description">
-                      A modern blogging platform with markdown support, user
-                      authentication, and a responsive design.
+                      Full-stack web app that creates personalized cover letters
+                      by analyzing resumes against job descriptions. Built with
+                      React frontend and Flask backend using Google's Gemini
+                      API. Processes Word documents and generates professionally
+                      formatted letters matching specific job requirements.
                     </p>
                     <div className="project-tags">
-                      <span className="project-tag">TypeScript</span>
-                      <span className="project-tag">Next.js</span>
-                      <span className="project-tag">PostgreSQL</span>
-                      <span className="project-tag">Tailwind</span>
+                      <span className="project-tag">Typescript</span>
+                      <span className="project-tag">Flask</span>
+                      <span className="project-tag">Gemini API</span>
                     </div>
                     <div className="project-buttons">
                       <a href="#" className="btn btn-primary">
                         Live Demo
                       </a>
-                      <a href="#" className="btn-icon">
+                      <a
+                        href="https://github.com/Harrieguru/Cover-Letter-Generator-Platform"
+                        className="btn-icon"
+                      >
                         <i className="fa-brands fa-github"></i>
                       </a>
                     </div>
@@ -296,27 +315,32 @@ export const Component: React.FC = () => {
 
                 <div className="project-card">
                   <img
-                    src=""
-                    alt="Smart Resume Screener"
+                    src={ebook}
+                    alt="Digital Library Management Platform"
                     className="project-image"
                   />
                   <div className="project-content">
-                    <h3 className="project-title">Smart Resume Screener</h3>
+                    <h3 className="project-title">eBook Management System</h3>
                     <p className="project-description">
-                      application which parses resumes and automatically rank
-                      candidates against job descriptions
+                      Digital library platform for organizing, searching, and
+                      accessing book collections. Features Blazor/C# frontend
+                      with ASP.NET Core REST API and Entity Framework. Uses AWS
+                      services (DynamoDB, S3, Lambda) for scalable NoSQL
+                      storage, file management, and serverless processing.
                     </p>
                     <div className="project-tags">
-                      <span className="project-tag">Python</span>
-                      <span className="project-tag">FastAPI</span>
-                      <span className="project-tag">PostgreSQL</span>
-                      <span className="project-tag">PyTorch</span>
+                      <span className="project-tag"> C# WPF</span>
+                      <span className="project-tag">ASP.NET Core MVC</span>
+                      <span className="project-tag">AWS</span>
                     </div>
                     <div className="project-buttons">
                       <a href="#" className="btn btn-primary">
                         Live Demo
                       </a>
-                      <a href="#" className="btn-icon">
+                      <a
+                        href="https://github.com/Harrieguru/Digital-Library-Management-Platform"
+                        className="btn-icon"
+                      >
                         <i className="fa-brands fa-github"></i>
                       </a>
                     </div>
@@ -324,17 +348,28 @@ export const Component: React.FC = () => {
                 </div>
 
                 <div className="project-card">
-                  <img src="" alt="AI Chatbot" className="project-image" />
+                  <img
+                    src={healthassist}
+                    alt="Healthcare Assistant Web App"
+                    className="project-image"
+                  />
                   <div className="project-content">
-                    <h3 className="project-title">AI Chatbot for Rentals</h3>
+                    <h3 className="project-title">
+                      Healthcare Assistant Web App
+                    </h3>
                     <p className="project-description">
-                      AI-driven chatbot replacing realtors
+                      Responsive symptom analysis platform with personalized
+                      provider recommendations. Built with React frontend and
+                      C#/ASP.NET Core backend using Entity Framework. Integrates
+                      Gemini API for AI symptom diagnosis and Google Maps API
+                      for provider location. Features secure authentication and
+                      encryption for patient data protection.
                     </p>
                     <div className="project-tags">
                       <span className="project-tag">React</span>
-                      <span className="project-tag">Firebase</span>
-                      <span className="project-tag">Redux</span>
-                      <span className="project-tag">Material UI</span>
+                      <span className="project-tag">C#</span>
+                      <span className="project-tag">ASP.NET</span>
+                      <span className="project-tag">Supabase</span>
                     </div>
                     <div className="project-buttons">
                       <a href="#" className="btn btn-primary">
