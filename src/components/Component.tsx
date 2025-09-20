@@ -258,9 +258,9 @@ export const Component: React.FC = () => {
                     <h3 className="project-title">Link2Lease</h3>
                     <p className="project-description">
                       Link2Lease is a web and mobile app that connects tenants
-                      and landlords directly, removing real estate agents. Its
-                      AI chatbot guides users through property searches,
-                      questions, viewings, and lease applications.
+                      and landlords directly. Its AI chatbot guides users
+                      through property searches, questions, viewings, and lease
+                      applications.
                     </p>
                     <div className="project-tags">
                       <span className="project-tag">React</span>
