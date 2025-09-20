@@ -598,6 +598,24 @@
 @media (min-width: 768px) {
   .nav-links {
     display: flex;
+    /* display: none; */
+  }
+
+  .theme-button {
+    display: inline-flex;
+    order: 1;
+  }
+
+  .mobile-menu {
+    display: block; /* menu toggler appears */
+  }
+}
+
+@media (min-width: 768px) {
+  .theme-button {
+    margin: auto;
+    display: inline-flex;
+    order: 1;
   }
 }
 
@@ -618,6 +636,8 @@
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+
+  /* extra for mobile */
 }
 
 .theme-button:hover {

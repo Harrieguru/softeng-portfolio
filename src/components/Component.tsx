@@ -15,6 +15,7 @@ import springboot from "../assets/spring-boot.png";
 import Tailwind_Logo from "../assets/Tailwind_Logo.png";
 import Typescript from "../assets/Typescript.png";
 import Portfolio from "../assets/portfolio.png";
+import { Hero } from "./Hero"; // use relative path
 import "../styles/component.css";
 
 //define interface for type safety
@@ -127,7 +128,7 @@ export const Component: React.FC = () => {
                   <a href="#projects">Projects</a>
                   <a href="#contact">Contact</a>
                   <hr className="divider" />
-                  <button
+                  {/* <button
                     className="toggle-theme-btn"
                     type="button"
                     onClick={toggleTheme}
@@ -138,7 +139,7 @@ export const Component: React.FC = () => {
                     <span className="material-symbols-outlined">
                       {isDarkMode ? "light_mode" : "dark_mode"}
                     </span>
-                  </button>
+                  </button> */}
                 </div>
               </details>
             </div>
@@ -148,9 +149,11 @@ export const Component: React.FC = () => {
           <section id="home" className="hero">
             <div className="container hero-content">
               <div className="hero-text">
-                <h2 className="hero-greeting">Hello, I'm</h2>
+                {/* <h2 className="hero-greeting">Hello, I'm</h2>
                 <h1 className="hero-name">Harriet Odhiambo</h1>
-                <h3 className="hero-title">Software Developer</h3>
+                <h3 className="hero-title">Software Developer</h3> */}
+                {/* Hero typed */}
+                <Hero />
                 <p className="hero-description">
                   I build exceptional and accessible digital experiences for the
                   web.
@@ -464,8 +467,8 @@ export const Component: React.FC = () => {
                   <h3>Contact Information</h3>
                   <p>
                     Feel free to reach out to me for any questions or
-                    opportunities. I'm always open to discussing new projects,
-                    creative ideas, or opportunities to be part of your vision.
+                    opportunities. I'm always open to discussing new projects
+                    and creative ideas.
                   </p>
 
                   <div className="contact-details">
