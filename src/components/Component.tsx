@@ -440,14 +440,14 @@ export const Component: React.FC = () => {
                 <div className="timeline-item">
                   <div className="timeline-dot"></div>
                   <div className="timeline-card">
-                    <h3 className="timeline-title">Junior Software Engineer</h3>
+                    <h3 className="timeline-title">Software Engineer Intern</h3>
                     <h4 className="timeline-company">Signvrse</h4>
-                    <p className="timeline-date">Apr 2025 - Aug 2025</p>
+                    <p className="timeline-date">May 2025 - Aug 2025</p>
                     <p className="timeline-description">
                       Developed and maintained systems running at scale.
                       Improved system performance by adding micro services and
                       integrating new components to the already existing system.
-                      Implemented REST API's using Go ,Python coupled with
+                      Implemented REST API's using Go,Python coupled with
                       Postgres as a database.Implemented React.js interfaces
                       with WCAG 2.1 accessibility compliance.
                     </p>
