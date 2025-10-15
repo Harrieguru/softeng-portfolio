@@ -357,9 +357,7 @@ export const Component: React.FC = () => {
                     className="project-image"
                   />
                   <div className="project-content">
-                    <h3 className="project-title">
-                      GameZone - Video Game E-Commerce Platform
-                    </h3>
+                    <h3 className="project-title">GameZone</h3>
                     <p className="project-description">
                       A fully functional game store web application built with
                       vanilla HTML, CSS, and JavaScript. Features include an
