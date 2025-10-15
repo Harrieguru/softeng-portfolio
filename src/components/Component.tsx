@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import pic from "../assets/pic.jpg";
 import cover from "../assets/cover.png";
 import ebook from "../assets/ebook.png";
-import healthassist from "../assets/healthassist.png";
+import gamezone from "../assets/gamezone.png";
 import link2lease from "../assets/link2lease.png";
 import docker from "../assets/docker.png";
 import dotnet from "../assets/dotnet.png";
@@ -303,9 +303,9 @@ export const Component: React.FC = () => {
                       <span className="project-tag">Gemini API</span>
                     </div>
                     <div className="project-buttons">
-                      <a href="#" className="btn btn-primary">
+                      {/* <a href="#" className="btn btn-primary">
                         Live Demo
-                      </a>
+                      </a> */}
                       <a
                         href="https://github.com/Harrieguru/Cover-Letter-Generator-Platform"
                         className="btn-icon"
@@ -337,9 +337,9 @@ export const Component: React.FC = () => {
                       <span className="project-tag">AWS</span>
                     </div>
                     <div className="project-buttons">
-                      <a href="#" className="btn btn-primary">
+                      {/* <a href="#" className="btn btn-primary">
                         Live Demo
-                      </a>
+                      </a> */}
                       <a
                         href="https://github.com/Harrieguru/Digital-Library-Management-Platform"
                         className="btn-icon"
@@ -352,33 +352,39 @@ export const Component: React.FC = () => {
 
                 <div className="project-card">
                   <img
-                    src={healthassist}
-                    alt="Healthcare Assistant Web App"
+                    src={gamezone}
+                    alt="GameZone ecommerce platform"
                     className="project-image"
                   />
                   <div className="project-content">
                     <h3 className="project-title">
-                      Healthcare Assistant Web App
+                      GameZone - Video Game E-Commerce Platform
                     </h3>
                     <p className="project-description">
-                      Responsive symptom analysis platform with personalized
-                      provider recommendations. Built with React frontend and
-                      C#/ASP.NET Core backend using Entity Framework. Integrates
-                      Gemini API for AI symptom diagnosis and Google Maps API
-                      for provider location. Features secure authentication and
-                      encryption for patient data protection.
+                      A fully functional game store web application built with
+                      vanilla HTML, CSS, and JavaScript. Features include an
+                      interactive hero slider, product browsing with
+                      search/filter capabilities, shopping cart with quantity
+                      management, wishlist functionality, checkout process, and
+                      order receipt generation. All state management handled
+                      in-memory without external dependencies.
                     </p>
                     <div className="project-tags">
-                      <span className="project-tag">React</span>
-                      <span className="project-tag">C#</span>
-                      <span className="project-tag">ASP.NET</span>
-                      <span className="project-tag">Supabase</span>
+                      <span className="project-tag">HTML5</span>
+                      <span className="project-tag">CSS3</span>
+                      <span className="project-tag">JavaScript</span>
                     </div>
                     <div className="project-buttons">
-                      <a href="#" className="btn btn-primary">
+                      <a
+                        href="https://gamezzone.netlify.app/"
+                        className="btn btn-primary"
+                      >
                         Live Demo
                       </a>
-                      <a href="#" className="btn-icon">
+                      <a
+                        href="https://github.com/Harrieguru/GameZone"
+                        className="btn-icon"
+                      >
                         <i className="fa-brands fa-github"></i>
                       </a>
                     </div>
