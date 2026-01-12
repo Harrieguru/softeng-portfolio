@@ -291,11 +291,9 @@ export const Component: React.FC = () => {
                       Cover Letter Generator Platform
                     </h3>
                     <p className="project-description">
-                      Full-stack web app that creates personalized cover letters
-                      by analyzing resumes against job descriptions. Built with
-                      React frontend and Flask backend using Google's Gemini
-                      API. Processes Word documents and generates professionally
-                      formatted letters matching specific job requirements.
+                      A full stack web app that generates personalized cover
+                      letters by analyzing resumes and job descriptions, built
+                      with a React frontend, Flask backend, and Cohere API.
                     </p>
                     <div className="project-tags">
                       <span className="project-tag">Typescript</span>
@@ -318,40 +316,6 @@ export const Component: React.FC = () => {
 
                 <div className="project-card">
                   <img
-                    src={ebook}
-                    alt="Digital Library Management Platform"
-                    className="project-image"
-                  />
-                  <div className="project-content">
-                    <h3 className="project-title">eBook Management System</h3>
-                    <p className="project-description">
-                      Digital library platform for organizing, searching, and
-                      accessing book collections. Features Blazor/C# frontend
-                      with ASP.NET Core REST API and Entity Framework. Uses AWS
-                      services (DynamoDB, S3, Lambda) for scalable NoSQL
-                      storage, file management, and serverless processing.
-                    </p>
-                    <div className="project-tags">
-                      <span className="project-tag"> C# WPF</span>
-                      <span className="project-tag">ASP.NET Core MVC</span>
-                      <span className="project-tag">AWS</span>
-                    </div>
-                    <div className="project-buttons">
-                      {/* <a href="#" className="btn btn-primary">
-                        Live Demo
-                      </a> */}
-                      <a
-                        href="https://github.com/Harrieguru/Digital-Library-Management-Platform"
-                        className="btn-icon"
-                      >
-                        <i className="fa-brands fa-github"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="project-card">
-                  <img
                     src={gamezone}
                     alt="GameZone ecommerce platform"
                     className="project-image"
@@ -360,12 +324,9 @@ export const Component: React.FC = () => {
                     <h3 className="project-title">GameZone</h3>
                     <p className="project-description">
                       A fully functional game store web application built with
-                      vanilla HTML, CSS, and JavaScript. Features include an
-                      interactive hero slider, product browsing with
-                      search/filter capabilities, shopping cart with quantity
-                      management, wishlist functionality, checkout process, and
-                      order receipt generation. All state management handled
-                      in-memory without external dependencies.
+                      HTML, CSS, and JavaScript, featuring product browsing with
+                      search and filters, a shopping cart and wishlist, checkout
+                      flow, and in memory state management.
                     </p>
                     <div className="project-tags">
                       <span className="project-tag">HTML5</span>
@@ -444,16 +405,38 @@ export const Component: React.FC = () => {
                 <div className="timeline-item">
                   <div className="timeline-dot"></div>
                   <div className="timeline-card">
+                    <h3 className="timeline-title">
+                      Full Stack Developer Intern
+                    </h3>
+                    <h4 className="timeline-company">Cuddles Learning</h4>
+                    <p className="timeline-date">Nov 2025 - Present</p>
+                    <p className="timeline-description">
+                      Contributed to the development and improvement of an
+                      educational web platform serving over 150 active users.
+                      Built and refined responsive frontend features using React
+                      and TypeScript, while supporting backend services and
+                      database interactions to enable core application
+                      functionality. Collaborated closely with the team to
+                      optimize performance, improve user experience, and
+                      maintain scalable, data driven workflows.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="timeline">
+                <div className="timeline-item">
+                  <div className="timeline-dot"></div>
+                  <div className="timeline-card">
                     <h3 className="timeline-title">Software Engineer Intern</h3>
                     <h4 className="timeline-company">Signvrse</h4>
                     <p className="timeline-date">May 2025 - Aug 2025</p>
                     <p className="timeline-description">
-                      Developed and maintained systems running at scale.
-                      Improved system performance by adding micro services and
-                      integrating new components to the already existing system.
-                      Implemented REST API's using Go,Python coupled with
-                      Postgres as a database.Implemented React.js interfaces
-                      with WCAG 2.1 accessibility compliance.
+                      Built secure and scalable APIs with REST and GraphQL,
+                      implemented authentication and data validation, and
+                      designed accessible React interfaces compliant with WCAG
+                      2.1. Prototyped interactive 3D sign language experiences
+                      using Three.js with real time hand tracking integration.
                     </p>
                   </div>
                 </div>

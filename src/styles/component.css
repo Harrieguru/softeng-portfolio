@@ -1177,6 +1177,7 @@
   transform: translateY(-6px) scale(1.02);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1), 0 8px 10px rgba(0, 0, 0, 0.04);
   background: linear-gradient(145deg, #fff, #f0f2f5);
+  cursor: pointer;
 }
 
 /* Skill Images */
@@ -1330,6 +1331,7 @@
 
 .project-card:hover {
   box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 
 .project-image {
