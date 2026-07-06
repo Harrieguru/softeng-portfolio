@@ -2178,7 +2178,7 @@
   margin: 2px 18px;
 }
 
-*/ .toggle-theme-btn:hover {
+.toggle-theme-btn:hover {
   background-color: var(--neutral-200);
   border-color: var(--primary-400);
   color: var(--primary-600);
