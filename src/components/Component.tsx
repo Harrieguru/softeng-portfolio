@@ -128,7 +128,7 @@ export const Component: React.FC = () => {
                   <a href="#projects">Projects</a>
                   <a href="#contact">Contact</a>
                   <hr className="divider" />
-                  {/* <button
+                  <button
                     className="toggle-theme-btn"
                     type="button"
                     onClick={toggleTheme}
@@ -139,7 +139,7 @@ export const Component: React.FC = () => {
                     <span className="material-symbols-outlined">
                       {isDarkMode ? "light_mode" : "dark_mode"}
                     </span>
-                  </button> */}
+                  </button>
                 </div>
               </details>
             </div>
