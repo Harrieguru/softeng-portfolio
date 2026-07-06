@@ -409,7 +409,7 @@ export const Component: React.FC = () => {
                       Full Stack Developer Intern
                     </h3>
                     <h4 className="timeline-company">Cuddles Learning</h4>
-                    <p className="timeline-date">Nov 2025 - Present</p>
+                    <p className="timeline-date">Nov 2025 - Mar 2026</p>
                     <p className="timeline-description">
                       Contributed to the development and improvement of an
                       educational web platform serving over 150 active users.
