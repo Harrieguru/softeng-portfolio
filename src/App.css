@@ -6,11 +6,33 @@
   height: 40vmin;
   pointer-events: none;
 }
+@import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined);
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.mobile-dropdown .toggle-theme-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--neutral-100);
+  border: 1px solid var(--neutral-300);
+  color: var(--neutral-700);
+  width: auto;
+}
+
+.mobile-dropdown .toggle-theme-btn .material-symbols-outlined {
+  color: var(--primary-600);
+  font-size: 20px;
+}
+
+[data-theme="dark"] .mobile-dropdown .toggle-theme-btn {
+  background-color: var(--neutral-200);
+  border-color: var(--neutral-400);
+  color: var(--neutral-800);
 }
 
 .App-header {
